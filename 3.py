@@ -29,6 +29,9 @@ for j in range(i-1, 0, -1):
     n += 1
 
 """
+Output:
+
+
 Enter The i Value:8
        * 
       * * 

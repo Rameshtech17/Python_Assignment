@@ -17,6 +17,9 @@ for k in range(0, words.__len__()):
 
 
 """
+Output:
+
+
 program
 gram
 ten

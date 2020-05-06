@@ -13,6 +13,10 @@ val.sort()
 print("Highest Sum Of Two Number:{}+{}={}".format(val[num - 2], val[num - 1], val[num - 2] + val[num - 1]))
 
 """
+
+Output:
+
+
 Enter number of elements:7
 Enter element:
 5

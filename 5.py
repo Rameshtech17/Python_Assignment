@@ -19,6 +19,9 @@ for j in range(i, 0, -1):
 
 
 """"   
+Output:
+
+
 Enter The i Value:8
  * * * * * * * *
    * * * * * * *

@@ -18,6 +18,9 @@ for j in range(1, i + 1, 1):
     n -= 1
 
 """
+Output:
+
+
 Enter The i Value:8
         * 
        * * 

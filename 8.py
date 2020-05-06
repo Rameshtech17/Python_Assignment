@@ -122,7 +122,12 @@ na = input("   Enter product name:")
 
 fun(na)
 
+
+
 """
+Output:
+
+
 ###  i. Print all the names of the products in a list  ####
    Product Name:  samsung
    Product Name:  apple

@@ -13,6 +13,9 @@ for j in range(1, i+1):
     print()
 
 """
+Output:
+
+
 Enter The i Value:8
 * 
 * * 

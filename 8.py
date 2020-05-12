@@ -32,9 +32,6 @@ products = [
             "color": "red",
             "ram": 4,
             "screen": 6.1
-            # "color": "green",
-            # "ram": 4,
-            # "screen": 6.0
         }
     },
     {
@@ -71,6 +68,7 @@ prices = [
     }
 ]
 
+
 # i. Print all the names of the products in a list
 print("###  i. Print all the names of the products in a list  ####")
 for i in range(0, products.__len__()):
@@ -79,9 +77,17 @@ for i in range(0, products.__len__()):
 # ii. Print the product of "green" color
 print("###  ii. Print the product of \"green\" color  ####")
 
+k = 0
 for i in range(0, products.__len__()):
-    if products[i]["options"]["color"] == "green":
+    if products[i]["options"]["color"] != "green":
+        k += 1
+    else:
         print("   Product Name: ", products[i]["name"])
+        print("   Color :", products[i]["options"]["color"])
+        print("   RAM :", products[i]["options"]["ram"])
+        print("   Screen :", products[i]["options"]["screen"])
+if k == len(products):
+    print("   Product Not found")
 
 # iii. Get the list of products that has same "options"
 print("####  iii. Get the list of products that has same \"options\"  ###")
@@ -91,24 +97,32 @@ for i in range(0, products.__len__(), 1):
         if products[i]["options"] == products[j]["options"]:
             print("   These product has Same option: {}, {}".format(products[i]["name"], products[j]["name"]))
 
-# iv. Get products list that has price in between 5000 to 15000
+#iv. Get products list that has price in between 5000 to 15000
 print("###   iv. Get products list that has price in between 5000 to 15000   ###")
 
+l = 0
 print("   Product cost between  5000 to 15000")
 for i in range(0, prices.__len__(), 1):
-    if (prices[i]["price"] >= 5000) and (prices[i]["price"] <= 15000):
-        print("   Product name :", products[i]["name"])
-        print("   Color :", products[i]["options"]["color"])
-        print("   RAM :", products[i]["options"]["ram"])
-        print("   Screen :", products[i]["options"]["screen"])
+    if prices[i]["price"] >= 5000 and prices[i]["price"] <= 15000:
+        j = prices[i]["product_id"]
+        print("   Product Name: ", products[j - 1]["name"])
+        print("   Color :", products[j - 1]["options"]["color"])
+        print("   RAM :", products[j - 1]["options"]["ram"])
+        print("   Screen :", products[j - 1]["options"]["screen"])
+        l = 1
+if l == 0:
+    print("   Product Not found")
 
 # v. Write a function that takes product name as input and prints product details with it's price
 print("###  v. Write a function that takes product name as input and prints product details with it's price  ###")
 
 
 def fun(name):
+    m = 0
     for i in range(0, products.__len__()):
-        if products[i]["name"] == name:
+        if products[i]["name"] != name:
+            m += 1
+        else:
             print("   Product name :", products[i]["name"])
             print("   Color :", products[i]["options"]["color"])
             print("   RAM :", products[i]["options"]["ram"])
@@ -116,13 +130,13 @@ def fun(name):
             for j in range(0, prices.__len__()):
                 if products[i]["id"] == prices[j]["product_id"]:
                     print("   Price :", prices[j]["price"])
+    if m == len(products):
+        print("   Product Not found")
 
 
 na = input("   Enter product name:")
 
 fun(na)
-
-
 
 """
 Output:
